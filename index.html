@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8"
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <title>Web Design Challenge</title>
+    </head>
+
+    <body style="background-color: rgb(228, 228, 228);">
+        <div class="container-lg ">
+
+            <!-- Nav Menu at top of page 
+                It should have the name of the site on the left of the navigation bar, allowing users to return to the landing page from any page
+                It should contain a dropdown menu on the right of the navigation bar, named "Plots," to provide links to each individual visualization page
+                It should provide two more text links on the right: "Comparisons," which links to the comparisons page, and "Data," which links to the data page.
+                It should be responsive (using media queries). 
+                -->
+            <div >     
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                <div class="container-fluid" style="background-color: white; font-family: 'Times New Roman', Times, serif;" >
+                <a style="background-color: lightseagreen;color: white;"" class="navbar-brand" href="#">Latitude</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                    <div class="col-lg-3" id="navbarSupportedContent" >
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Plots
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/visualization/viz1.html">Max Temperature</a></li>
+                            <li><a class="dropdown-item" href="/visualization/viz2.html">Humidity</a></li>
+                            <li><a class="dropdown-item" href="/visualization/viz3.html">Cloudiness</a></li>
+                            <li><a class="dropdown-item" href="/visualization/viz4.html">Wind Speed</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/visualization/data.html">Data</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/visualization/comparisons.html">Comparison</a>
+                        </li>
+
+
+                    </ul>
+                    </div>
+                </div>
+            </nav></div>
+            
+
+            <div class="row" style="padding: 50px; margin: auto;">
+                <!-- Home page -->
+                <div class="col-lg-8 col-sm-12" >
+                    <div class="card container">
+                        <h1 style="color: lightseagreen; font-size: 30px; font-family: 'Times New Roman', Times, serif ;">Summary: Latitude vs. X</h1>
+                        <br>   
+
+                           <!-- An explanation of the project -->
+                            <img src="/assests/images/Fig1.png"class="img-fluid " alt="City Latitude vs Max Temp Graph"> 
+                            <p style="margin: 10pt;" class="col-8 in-line"> The purpose of this project was to analyze how weather changes as you get closer to the equator.
+                                To accomplish this analysis, we first pulled data from the OpenWeatherMap APO to assemble a dataset on over 500 cities.
+                            </p>
+                            <p style="margin: 10pt;">
+                                After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude.
+                                Factors we looked at included: temperature, cloudiness,, wind speed, and humidity. 
+                                This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.
+                            </p>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 ">
+                    <div class="card ">
+                        <h1 style="color: lightseagreen; font-size: 30px; font-family: 'Times New Roman', Times, serif ;">Visualizations</h1>
+                        <br>   
+                                        <!-- Links to each visualizations page by images on sidebar -->
+                        <div class="container">
+                            <div class="row"> 
+                                <a href="/visualization/viz1.html" class="col-lg-6">
+                                    <img src="/assests/images/Fig1.png" class="img-fluid" alt="City Latitude vs Max Temp">
+                                </a>
+                                <a href="/visualization/viz2.html"class="col-lg-6">
+                                    <img src="/assests/images/Fig2.png" class="img-fluid" alt="City Latitude vs Humidity">
+                                </a>
+                            </div>
+                            
+                            <div class="row"> 
+                                <a href="/visualization/viz3.html"class="col-lg-6">
+                                    <img src="/assests/images/Fig3.png" class="img-fluid" alt="City Latitude vs Cloudiness">
+                                </a>
+                                <a href="/visualization/viz4.html"class="col-lg-6">
+                                    <img src="/assests/images/Fig4.png" class="img-fluid" alt="City Latitude vs Wind Speed">
+                                </a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div> 
+                <!-- Visualizations -->
+                <!-- <img src="assets/images/cloudymap.png" alt="Cloudy Map"> 
+                A descriptive title and heading tag.
+                The plot or visualization for the selected comparison (latitude vs: max temperature, humidity, cloudiness, or wind speed). The images displayed on these pages should be stored in the `assets/images` folder.
+                A paragraph describing the plot and its significance.
+                -->
+        
+            </div>
+
+            <div>
+                <!-- Comparisons Page -->
+                <!-- Contains all of the visualizations on the same page so they can easily be compared with each other.
+                Uses a Bootstrap grid for the visualizations.
+                The grid must be two visualizations across medium and large screens, and it must be one visualization across on extra-small or small screens.
+                -->
+
+
+            </div>
+
+            <div>
+                <!-- Data Page wit ha responsive table containing the data used in the visualizations.-->
+                <!-- The table must be a Bootstrap table component
+                    The data must come from exporting the `.csv` file as HTML or by converting it to HTML. Try using a tool that you already know: Pandas. Pandas has a method, appropriately called `to_html`, that allows you to generate an HTML table from a Pandas DataFrame. 
+                -->
+
+
+            </div>
+        </div>
+
+
+    </body>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+
+</html>
